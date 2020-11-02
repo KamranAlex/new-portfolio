@@ -97,7 +97,7 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script type="text/javascript">
       function sendMessage(event) {
-       event.preventDefault();
+        event.preventDefault();
         // var userName = document.getElementById("user_name").value;
         // var userEmail = document.getElementById("user_email").value;
         // var subject = document.getElementById("subject").value;
@@ -364,8 +364,12 @@
           <!-- Left Side Ends -->
           <!-- Contact Form Starts -->
           <div class="col-12 col-lg-8">
-            <form class="contactform">
-              <div class="contactform" onsubmit="sendMessage()" >
+            <form
+              class="contactform"
+              onsubmit="sendMessage()"
+              id="contact-form"
+            >
+              <div class="contactform">
                 <div class="row">
                   <div class="col-12 col-md-4">
                     <input
@@ -395,15 +399,13 @@
                     />
                   </div>
                   <div class="col-12">
-                    <input
+                    <textarea
                       type="text"
-                      cols='30'
-                      rows='10'
                       name="message"
                       id="message"
                       placeholder=" MESSAGE"
                       required
-                    ></input>
+                    ></textarea>
                     <button type="submit" class="btn btn-contact">
                       Send Message
                     </button>
